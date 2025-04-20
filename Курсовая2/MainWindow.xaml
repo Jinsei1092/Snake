@@ -1,0 +1,17 @@
+﻿<Window x:Class="Snake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="Змейка" Height="599" Width="822" KeyDown="Window_KeyDown">
+    <Grid Name="gameGrid1">
+        <Canvas x:Name="gameGrid" HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="500" Background="#FFDADADA" Margin="297,28,0,0"/>
+        <Button x:Name="btStart" Content="Start" HorizontalAlignment="Left" Height="40" Margin="29,70,0,0" VerticalAlignment="Top" Width="251" FontSize="24" IsEnabled="False" Click="btStart_Click"/>
+        <ListBox x:Name="LbScore" HorizontalAlignment="Left" Height="368" Margin="29,115,0,0" VerticalAlignment="Top" Width="251" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button x:Name="btSaveJson" Content="Save score" HorizontalAlignment="Left" Height="40" Margin="29,488,0,0" VerticalAlignment="Top" Width="251" FontSize="24" Click="btSaveJson_Click"/>
+        <Label Content="Difficulty:" HorizontalAlignment="Left" Height="37" Margin="29,28,0,0" VerticalAlignment="Top" Width="95" FontSize="20"/>
+        <ComboBox x:Name="cbdifficulties" HorizontalAlignment="Left" Height="37" Margin="129,28,0,0" VerticalAlignment="Top" Width="151" SelectionChanged="ComboBox_SelectionChanged"/>
+    </Grid>
+</Window>
